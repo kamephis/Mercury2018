@@ -1,0 +1,80 @@
+/**
+* Druck-CSS
+* für den Etikettendruck
+**/
+
+.printlabel {
+    border: 1px solid black;
+}
+
+.printCard {
+    width: 85mm;
+    height: 55mm;
+    font-size: 11pt;
+}
+
+.print-col-3cm-l,
+.print-col-3cm-r,
+.print-col-4cm,
+.print-col-2cm-l,
+.print-col-2cm-r,
+.print-col-6cm {
+    font-size: 11pt;
+    line-break: auto;
+}
+
+.print-col-3cm-l {
+    position: absolute;
+    width: 2cm;
+    height: 5cm;
+    left: 1cm;
+    top: 0;
+}
+
+.print-col-4cm {
+    position: absolute;
+    left: 2cm;
+    top: 0;
+    width: 6cm;
+    height: 5cm;
+}
+
+.print-col-3cm-r {
+    position: absolute;
+    left: 8cm;
+    top: 0;
+    width: 2cm;
+    height: 5cm;
+}
+
+/**
+* vertical
+ **/
+.print-col-2cm-l {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5cm;
+    height: 4.7cm;
+}
+
+.print-col-6cm {
+    position: absolute;
+    left: 2cm;
+    top: 0;
+    width: 5.5cm;
+    height: 4.7cm;
+}
+
+.print-col-2cm-r {
+    position: absolute;
+    left: 8cm;
+    top: 0;
+    width: 1.5cm;
+    height: 4.7cm;
+}
+
+.printHighlight {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight: bold;
+}

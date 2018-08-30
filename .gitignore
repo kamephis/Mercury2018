@@ -1,0 +1,11 @@
+info.php
+**/.bak
+**/.log
+/.backup
+.idea/inspectionProfiles/
+.idea/workspace.xml
+/models/login_model.php.bak
+/new/
+/config.php
+/conf.php
+/unused/

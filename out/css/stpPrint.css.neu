@@ -1,0 +1,54 @@
+/**
+* Druck-CSS
+* für den Etikettendruck
+**/
+@media print{
+
+.printContainer{
+    border:1pt solid red!important;
+    position:relative;
+    height:5cm;
+    width:10cm;
+}
+
+.printlabel {
+
+/*    padding:0.5cm;*/
+}
+
+/**
+* vertical
+ **/
+.print-left-col {
+    position:absolute;
+    left:0;
+    top:0;
+    width:1cm;
+    height:2cm;
+    border:1pt solid black!important;
+
+}
+
+.print-mid-col {
+    position:absolute;
+    left:2cm;
+    top:0;
+    width:6cm;
+    height:5cm;
+    border:1pt solid black!important;
+
+}
+
+.print-right-col {
+    position: absolute;
+    border:1pt solid black!important;
+    left:8cm;
+    width:1cm;
+    height:5cm;
+}
+
+.printHighlight{
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight:bold;
+}
+}
