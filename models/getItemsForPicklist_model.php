@@ -22,6 +22,9 @@ class GetItemsForPicklist_Model extends Model
     /**
      * Alle Picklistenpositionen (Artikel) aus der intern
      * Datenbank abrufen.
+     *
+     * aktualisiert für Villingen
+     *
      * @return array
      * ItemStatus = Null Standard (nicht bearbeitet)
      * ItemStatus = 1 in Bearbeitung
@@ -73,6 +76,40 @@ class GetItemsForPicklist_Model extends Model
 
         if (strlen($halle) > 0) {
             switch ($halle) {
+                case 'EG':
+                    $filter .= " AND (a3.BinName LIKE 'EG%'";
+                    $filter .= " OR a3.BinName LIKE 'COU%')";
+                    break;
+
+                case 'G1':
+                    $filter .= " AND (a3.BinName LIKE 'G1%'";
+                    $filter .= " OR a3.BinName LIKE 'Ultra%'";
+                    $filter .= " OR a3.BinName LIKE 'WB-Naeh%')";
+                    break;
+
+                case 'G2':
+                    $filter .= " AND (a3.BinName LIKE 'G2%'";
+                    $filter .= " OR a3.BinName LIKE 'RG%'";
+                    $filter .= " OR a3.BinName LIKE 'LPR%'";
+                    $filter .= " OR a3.BinName LIKE 'BRG%')";
+                    break;
+
+                case 'G3':
+                    $filter .= " AND (a3.BinName LIKE 'G3%'";
+                    $filter .= " OR a3.BinName LIKE 'NS%'";
+                    $filter .= " OR a3.BinName LIKE 'RK%'";
+                    $filter .= " OR a3.BinName LIKE 'GK%'";
+                    $filter .= " OR a3.BinName LIKE 'MX%'";
+                    $filter .= " OR a3.BinName LIKE 'KW%'";
+                    $filter .= " OR a3.BinName LIKE 'G3RG%'";
+                    $filter .= " OR a3.BinName LIKE 'NG%'";
+                    $filter .= " OR a3.BinName LIKE 'OB%')";
+                    break;
+                case 'ALT_':
+                    $filter .= " AND a3.BinName LIKE 'ALT_%'";
+                    break;
+
+/*
                 case 'H1':
                     $filter .= " AND (a3.BinName LIKE 'H1%'";
                     $filter .= " OR a3.BinName LIKE 'RK%'";
@@ -98,6 +135,7 @@ class GetItemsForPicklist_Model extends Model
                     $filter .= " OR a3.BinName LIKE 'KW%'";
                     $filter .= " OR a3.BinName LIKE 'MX%')";
                     break;
+*/
             }
         }
 

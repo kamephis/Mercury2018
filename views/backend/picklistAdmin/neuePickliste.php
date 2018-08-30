@@ -78,6 +78,7 @@ if (isset($_POST['createPl']) && strlen($_POST['createPl']) > 0) {
                                                 <option value="G1">G1</option>
                                                 <option value="G2">G2</option>
                                                 <option value="G3">G3</option>
+                                                <option value="ALT_">ALT</option>
                                             </select>
                                         </div>
 
