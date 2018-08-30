@@ -43,11 +43,11 @@ if (isset($_REQUEST['selectedPicklist'])) {
                             <?php
                             if (is_array($aPicklists[0])) {
                                 foreach ($aPicklists as $item) {
-                                    echo '<option value="' . $item['PLHkey'] . '">' . $item['PLHkey'] . ' ' . (strlen($item['PLcomment']) > 0 ? '|' : '') . ' ' . $item['PLcomment'] . '</option>';
+                                    echo '<option value="' . $item['PLHkey'] . '">' . $item['PLHkey'] . ' ' . (strlen($item['PLcomment']) > 0 ? '|' : '') . ' ' . utf8_encode($item['PLcomment']) . '</option>';
                                 }
                             } else {
                                 (strlen($aPicklists['PLcomment']) > 0 ? ' | ' : '');
-                                echo '<option value="' . $aPicklists['PLHkey'] . '">' . $aPicklists['PLHkey'] . ' ' . (strlen($aPicklists['PLcomment']) > 0 ? '|' : '') . ' ' . $aPicklists['PLcomment'] . '</option>';
+                                echo '<option value="' . $aPicklists['PLHkey'] . '">' . $aPicklists['PLHkey'] . ' ' . (strlen($aPicklists['PLcomment']) > 0 ? '|' : '') . ' ' . utf8_encode($aPicklists['PLcomment']) . '</option>';
                             }
                             ?>
                         </select>

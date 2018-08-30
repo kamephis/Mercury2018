@@ -223,7 +223,7 @@ class Backend_Model extends Model
      */
     public function getAllPicker()
     {
-        $sql = "SELECT UID, name, vorname FROM iUser WHERE dept = 'picker' OR dept = 'teamleiter' ORDER BY vorname, name ASC";
+        $sql = "SELECT UID, name, vorname FROM iUser WHERE dept = 'picker' OR dept = 'teamleiter' AND active = 'on' ORDER BY vorname, name ASC";
         $this->db->exec("set names utf8");
         $result = $this->db->select($sql);
         return $result;

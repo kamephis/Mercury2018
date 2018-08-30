@@ -397,10 +397,12 @@ class PicklistAdmin_Model extends Model
     /**
      * Auflistung aller Picker im System
      * @return bool|mysqli_result
+     *
+     * nicht verwendet
      */
-    public function getPicker()
+    public function getPicker2()
     {
-        $sqlPicker = "SELECT UID,name,vorname,Username,dept FROM iUser WHERE dept = 'picker' OR dept = 'teamleiter' ORDER BY vorname, name ASC";
+        $sqlPicker = "SELECT UID,name,vorname,Username,dept FROM iUser WHERE  active = 'on' AND (dept = 'picker' OR dept = 'teamleiter') ORDER BY vorname, name ASC";
         $result = $this->db->select($sqlPicker);
 
         return $result;

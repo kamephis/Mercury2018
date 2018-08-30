@@ -261,7 +261,7 @@ class NeuePickliste_Model extends Model
     public function getPicker()
     {
         $aPicker = array();
-        $sql = $this->db->prepare("SELECT UID,name,vorname,dept FROM iUser WHERE dept = 'picker' OR dept = 'teamleiter' ORDER BY vorname, name ASC");
+        $sql = $this->db->prepare("SELECT UID,name,vorname,dept FROM iUser WHERE active = 'on' AND (dept = 'picker' OR dept = 'teamleiter') ORDER BY vorname, name ASC");
         $this->db->exec("set names utf8");
         $sql->execute();
 
