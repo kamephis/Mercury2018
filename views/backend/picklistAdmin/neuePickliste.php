@@ -74,9 +74,10 @@ if (isset($_POST['createPl']) && strlen($_POST['createPl']) > 0) {
                                             <select name="selHalle" class="searchParameter form-control addComment"
                                                     id="selHalle">
                                                 <option value="">Kein Filter</option>
-                                                <option value="H1">H1</option>
-                                                <option value="H2">H2</option>
-                                                <option value="ZG">ZG</option>
+                                                <option value="EG">EG</option>
+                                                <option value="G1">G1</option>
+                                                <option value="G2">G2</option>
+                                                <option value="G3">G3</option>
                                             </select>
                                         </div>
 
