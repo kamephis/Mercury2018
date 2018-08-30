@@ -195,7 +195,7 @@ class ImportPixiPickliste_Model extends Model
 
                                 'PLIheaderRef' => $items['PLIheaderRef'],
                                 'BinSortNum' => $items['BinSortNum'],
-                                'ItemName' => $items['ItemName'],
+                                'ItemName' => utf8_encode($items['ItemName']),
                                 'BinName' => $items['BinName'],
                                 'BinKey' => $items['BinKey'],
 
