@@ -110,20 +110,20 @@ class Login_Model extends Model
                     case 'teamleiter':
                         $this->setSRedirectURL($sUrl . 'backend');
                         break;
-                    case 'kusdev':
+                    case 'kus':
                         $this->setSRedirectURL($sUrl . 'kundenservice');
                         break;
                 }
                 break;
 
-            case 'zuschnittdev':
-            case 'pickdev':
+            case 'zuschnitt':
+            case 'pick':
                 if ($dept == 'picker' || $dept == 'teamleiter') {
                     switch ($sSubdomain) {
-                        case 'zuschnittdev':
+                        case 'zuschnitt':
                             $this->setSRedirectURL($sUrl . 'scanArt');
                             break;
-                        case 'pickdev':
+                        case 'pick':
                             $this->setSRedirectURL($sUrl . 'scanLocation');
                             break;
                     }
